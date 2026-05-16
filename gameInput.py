@@ -66,7 +66,10 @@ def start():
         elif command == "resign":
             resign()
         elif command == "move":
-            move(args[1])
+            if len(args) < 2:
+                print("❌ Provide column number")
+            else:
+                move(args[1])
         elif command == "help":
             help()
         else:
