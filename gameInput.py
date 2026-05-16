@@ -54,6 +54,8 @@ def start():
         input_line = input("\033[34m")
         print("\033[0m",end="")
         args = input_line.split()
+        if len(args) == 0:
+            continue
         command = args[0]
         if command == "start":
             startGame()
